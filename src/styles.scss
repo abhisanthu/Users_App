@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    color: #333;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    letter-spacing: .01em;
+    line-height: 20px;
+    font-weight: 400;
+    height: 100vh;
+    background-color: #F5F5F5;
+    position: relative;
+}
+#container {
+    display: grid;
+    grid-template-columns: 145px auto;
+    height: 100%;
+
+    #content {
+        padding: 0px;
+        margin: 0px;
+
+        ul {
+            list-style-type: none;
+            margin:0;padding:0;
+        
+            li {
+                background: #fff;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 8px;
+        
+                a {
+                    font-size: 1.5em;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color:#00A8FF;
+                }
+        
+                ul {
+                    margin-top: 20px;
+                    
+                    li {
+                        padding:0;
+        
+                        a {
+                            font-size: 1em;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

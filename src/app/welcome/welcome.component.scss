@@ -1,0 +1,26 @@
+.welcome-container{
+    background-image: url("../../assets/images/backgroundImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.welcome-content{
+    padding: 15%;
+    padding-top: 10%;
+    font-family: serif;
+    
+}
+.appName{
+    font-size: 100px;
+    color: lavenderblush;
+    font-style: italic;
+    margin-top: 10%;
+}
+.logo {
+    height: 60%;
+    width: 60%;
+}
+

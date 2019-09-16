@@ -1,0 +1,272 @@
+.Register-container{
+    background-color:#0031bb;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../../assets/images/backgroundImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.Register-content{
+   padding: 30px;
+   padding-top: 6%;
+   height: 100%;
+   width: 50%;
+}
+.Register-content h1 {
+   font-size: 21px;
+   font-weight: 700;
+   line-height: 30px;
+   padding-bottom: 20px;
+   text-align: center;
+   color: #fff;
+}
+.Register-content span {
+   color: #000;
+   display: block;
+   font-family: Lato,sans-serif;
+   font-size: 13px;
+   font-weight: 700;
+   line-height: 28px;
+}
+.panel-head{
+    display: flex;
+}
+.input-full-width{
+   display: block;
+   width: 100%;
+}
+.panel-input{
+   margin: 10px 20px 1px 20px;
+   position: relative;
+   border-radius: 10px;
+   padding: 1px 0px 1px 1px;
+   border: solid 2px #fff;
+   display: flex;
+}
+
+.panel-input input {
+   background-color: transparent;
+   border:transparent;
+   color: #fff;
+   font-family: Lato,sans-serif;
+   font-size: 16px;
+   width:97%;
+   padding: 10px 00px 10px 10px;
+   outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.panel-input i{
+   color:white;
+   padding: 10px;
+}
+.panel-input span{
+   cursor: pointer;
+   padding: 3px;
+}
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: white;
+  }
+.panel-button {
+   position: relative;
+   margin: 25px 0px;
+   background-color: green;
+   color:black;
+   width: 70%;
+}
+.next-button-width {
+   display: block;
+   color:black;
+   background-color: transparent;
+   border: transparent;
+   width: 100%;
+}
+.btn {
+   padding: 12px 16px;
+   border-radius: 2px;
+   cursor: pointer;
+   display: inline-block;
+   line-height: 10px;
+   position: relative;
+   text-align: center;
+}
+
+ /* The container */
+.panel-agree {
+   margin: 10px 20px;
+   position: relative;
+   color:white;
+   display: block;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.panel-agree a, .panel-input select {
+   color:green;
+   text-decoration: underline;
+   cursor: pointer;
+}
+.panel-agree p {
+   text-align: justify;
+   padding-left: 40px;
+   padding-right: 5px;
+   font-weight: 700;
+   cursor: default; 
+ }
+/* Hide the browser's default radio button */
+.panel-agree input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  background:transparent;
+  border: solid 5px white;
+  color: transparent;
+  border-radius: 50%;
+  display:block;
+}
+
+/* On mouse-over, add a grey background color */
+.panel-agree:hover input ~ .checkmark {
+   background-color:transparent;
+   border: solid 1px white;
+   color: white;
+}
+
+/* When the radio button is checked, add a blue background */
+.panel-agree input:checked ~ .checkmark {
+  background-color:transparent;
+  border: solid 1px white;
+  color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.panel-agree input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.panel-agree .checkmark:after {
+   top: 4px;
+   left: 4px;
+   width: 0px;
+	height: 0px;
+	border-radius: 50%;
+   background: green;
+   border:5px solid green;
+}
+.panel-error{
+   font-size: 12px;
+   padding: 0px 30px 0px 30px;
+   color: greenyellow;
+   margin-bottom: -20px;
+}
+.panels-body{
+   padding-bottom: 15px;
+}
+.close-button {
+   background-color: transparent;
+   border: transparent;
+   color: green;
+}
+.modal{
+   background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-dialog {
+   width: 400px;
+   margin: 30px auto;
+   margin-top: 15%;
+}
+.modal-footer {
+   padding: 5px 35px 25px;
+   text-align: center;
+   border-top: 0px solid #e5e5e5;
+}
+.modal-header {
+   padding: 15px;
+   border-bottom: 0px solid #e5e5e5;
+}
+.modal-body {
+   position: relative;
+   padding: 15px;
+   color:  #848484
+}
+@media (min-width:320px) and (max-width:479px){
+	.Register-content {
+        width: 100%;
+        padding: 0px; 
+        padding-top: 15%;
+	}	
+}
+@media (min-width:480px)and (max-width:766px){
+	.Register-content {
+        width: 100%;
+        padding: 0px; 
+        padding-top: 15%;
+	}	
+}
+@media (max-width:767px){
+	.Register-content {
+        width: 100%;
+        padding: 5px; 
+        padding-top: 15%;
+	}	
+}
+@media (min-width:768px)and (max-width:991px){
+	.Register-content {
+        padding: 5px;
+        padding-top: 10%;
+	}	
+}
+/*@media (min-width:992px) and (max-width:1199px){
+	.Register-container {
+		width: 50%;
+	}	
+}
+@media (min-width:1200px) and (max-width:1365px){
+	.Register-container {
+		width: 50%;
+	}	
+}
+@media (min-width:1366px) and (max-width:1439px){
+	.Register-container {
+		width: 50%;
+	}	
+}
+@media (min-width:1440px) {
+	.Register-container {
+		width: 50%;
+	}	
+}*/

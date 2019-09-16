@@ -1,0 +1,235 @@
+<div class="Register-container">
+  <div align="center">
+    <div class="Register-content">
+      <form #registerForm="ngForm"
+            (ngSubmit) = "onClickSubmit(registerForm.value)">
+        <div>
+          <h1 align="center">Register New Account</h1>
+        </div>
+        
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="register_email" 
+                   type="email" 
+                   name="register_email"
+                   placeholder="Email" 
+                   class="input-full-width"
+                   autocomplete="off"
+                   [(ngModel)]="reg_email"
+                   [pattern]="emailPattern"
+                   #registerEmail="ngModel"
+                   required>
+            <br/>  
+          </div>
+          <div class="panel-error" *ngIf="registerEmail.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="registerEmail.errors.required"> 
+              * Email Id is required.
+            </div>			   
+            <div *ngIf="registerEmail.errors.pattern"> 
+              * Email Id is not valid.
+            </div>	
+          </div>
+        </div>
+
+        <div align="left" class="panels-body">  
+          <div class="panel-input">
+            <input id="register_password"  
+                   [type]="showRegisterPassword ? 'text' : 'password'" 
+                   name="register_password"
+                   placeholder="Password" 
+                   class="input-full-width"
+                   [(ngModel)]="reg_password" 
+                   #regPassword="ngModel" 
+                   required>
+            <br/>  
+            <span (click)="registerPassword()">
+              <i [className]="showRegisterPassword ? 'fas fa-eye' : 'fas fa-eye-slash'"> </i>
+            </span>    
+          </div>
+          <div class="panel-error" *ngIf="regPassword.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="regPassword.errors.required"> 
+                * Password is required.
+            </div>	
+          </div>
+        </div>
+
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="verify_password" 
+                   [type]="showVerifyPassword ? 'text' : 'password'"
+                   name="verify_password"
+                   placeholder="Verify Password" 
+                   class="input-full-width" 
+                   [(ngModel)]="ver_password" 
+                   #verPassword="ngModel" 
+                   required>
+            <br/>       
+            <span (click)="verifyPassword()">
+              <i [className]="showVerifyPassword ? 'fas fa-eye' : 'fas fa-eye-slash'"> </i>
+            </span>
+          </div>
+          <div class="panel-error" *ngIf="verPassword.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="verPassword.errors.required"> 
+              * Verify password is required.
+            </div>	
+          </div>
+        </div>
+        
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="first_name" 
+                   type="text" 
+                   name="first_name"
+                   placeholder="First Name" 
+                   class="input-full-width"
+                   autocomplete="off"
+                   [(ngModel)]="first_Name" 
+                   #firstName="ngModel"
+                   required>
+            <br/>       
+          </div>
+          <div class="panel-error" *ngIf="firstName.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="firstName.errors.required"> 
+              * First Name is required.
+            </div>	
+          </div>
+        </div>
+
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="last_name" 
+                   type="text" 
+                   name="last_name"
+                   placeholder="Last Name" 
+                   class="input-full-width"
+                   autocomplete="off"
+                   [(ngModel)]="last_Name" 
+                   #lastName="ngModel" 
+                   required>
+            <br/>        
+          </div>
+          <div class="panel-error" *ngIf="lastName.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="lastName.errors.required"> 
+              * Last Name required.
+            </div>	
+          </div>	
+        </div>
+
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="country" 
+                   type="text"
+                   name="country" 
+                   placeholder="Country" 
+                   class="input-full-width"
+                   autocomplete="off"
+                   [(ngModel)]="country_s" 
+                   #countrys="ngModel" 
+                   required>
+            <br/>      
+          </div>
+          <div class="panel-error" *ngIf="countrys.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="countrys.errors.required"> 
+              * Country is required.
+            </div>	
+          </div>
+        </div>
+
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="area_code" 
+                   type="number" 
+                   name="area_code"
+                   placeholder="Area Code"
+                   class="input-full-width"
+                   autocomplete="off"
+                   [(ngModel)]="area_Code"
+                   #areaCode="ngModel"
+                   required>
+            <br/>      
+          </div>
+          <div class="panel-error" *ngIf="areaCode.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="areaCode.errors.required"> 
+              * Area Code is required.
+            </div>	
+          </div>
+        </div>
+
+        <div align="left" class="panels-body">
+          <div class="panel-input">
+            <input id="phone_number" 
+                   type="number" 
+                   name="phone_number"
+                   placeholder="Phone Number" 
+                   class="input-full-width"
+                   autocomplete="off"
+                   [(ngModel)]="phone_Number"
+                   #phoneNumber="ngModel"
+                   required>
+            <br/>      
+          </div>
+          <div class="panel-error" *ngIf="phoneNumber.errors && registerForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            <div *ngIf="phoneNumber.errors.required"> 
+              * Phone Number is required.
+            </div>	
+          </div>	
+        </div>
+      
+        <div>
+          <label class="panel-agree">
+            <p>By Registering, you agree to our
+              <a>Terms of services</a> and that you have read our
+              <a>Privacy Policy</a>
+            </p>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        
+<ol *ngFor="let f of name" type="A">
+  <li (click)="delete(f)">{{ f.name }}</li> 
+ </ol>
+ 
+ 
+ <ol *ngFor="let f of name" type="B">
+     <li (click)="update(f)">{{ f.name }}</li> 
+    </ol>
+
+        <div class="panel-button">
+        
+          <button class="next-button-width btn" type="submit" (click)="register(reg_email,reg_password,ver_password,first_Name,last_Name,country_s,area_Code,phone_Number)">Register</button>
+        </div> 
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- modal -->
+<div align="center" class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+    <!-- modal-dialog -->
+    <div class="modal-dialog" role="document">
+      <!-- modal-content -->
+      <div class="modal-content">
+        <!-- modal-header -->
+        <div class="modal-header">
+          <h3>iShareMem</h3>
+        </div>
+  
+        <!-- modal-body -->
+        <div class="modal-body">
+          <span *ngIf = "passwordVerificaion;then condition1 else condition2"></span>
+          <ng-template #condition1>Password and Verify Password should be same</ng-template>
+          <ng-template #condition2>Please Enter your Email Address</ng-template>
+        </div >
+
+        <!-- modal-footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-button" (click)="closeModalDialog()" >OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

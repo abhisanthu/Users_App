@@ -1,0 +1,82 @@
+
+<div class="container-fluid">
+
+      <table class="table">
+            <thead style="background-color: aqua">
+              <tr>
+                <th>login</th>
+                <th>id</th>
+                <th>node_id</th>
+
+                <th>avatar_url</th>
+                <th>gravatar_id</th>
+                <th>url</th>
+
+                <th>html_url</th>
+                <th>followers_url</th>
+                <th>following_url</th>
+
+                <th>gists_url</th>
+                <th>starred_url</th>
+                <th>subscriptions_url</th>
+
+                <th>organizations_url</th>
+                <th>repos_url</th>
+                <th>events_url</th>
+
+
+                <th>received_events_url</th>
+                <th>type</th>
+                <th>site_admin</th>
+
+                <th>Delete</th>
+                <th>Update ID</th>
+
+              </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let user of result" >
+                     
+                          <td> {{user.login }}</td>
+
+                          <td>  <input type="text" [(ngModel)]="user.id"> </td>
+                          
+                          <td> {{ user.node_id }} </td>
+
+                          <td> {{ user.avatar_url }}  </td>
+                          <td> {{ user.gravatar_id }} </td>
+                          <td> {{ user.url }}  </td>
+
+                          <td> {{ user.html_url }} </td>
+                          <td> {{ user.followers_url }}  </td>
+                          <td> {{ user.following_url }} </td>
+
+                          <td> {{ user.gists_url }}  </td>
+                          <td> {{ user.starred_url }} </td>
+                          <td> {{ user.subscriptions_url }}  </td>
+
+                          <td> {{ user.organizations_url }} </td>
+                          <td> {{ user.repos_url }}  </td>
+                          <td> {{ user.events_url }} </td>
+
+                          <td> {{ user.received_events_url }}  </td>
+                          <td> {{ user.type }} </td>
+                          <td> {{ user.site_admin }}  </td>
+
+
+                          <td (click)="deleteRow(user)"><i class="fa fa-trash" aria-hidden="true" id="trashid" ></i></td>
+                          <td><button type="button" class="btn btn-primary" (click)="updateId(user)">Update</button></td>
+                          
+                         
+                         
+                       </tr>
+          </tbody>
+           
+          </table>
+
+
+  </div>        
+      
+  
+  
+      
